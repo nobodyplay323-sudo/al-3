@@ -1,0 +1,153 @@
+{
+  "theme_and_art_direction": {
+    "concept": "Organic, Earthy & Editorial",
+    "description": "An award-worthy (Awwwards level) distinctive art direction focusing on calm, healing, and hope. It blends editorial elegance with modern SaaS functionality. The design avoids the generic 'medical' or 'AI-slop' look, instead favoring warm sands, sage greens, tactile surfaces, and generous negative space to reduce cognitive load and evoke a sense of safety.",
+    "language": "Romanian"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Cormorant Garamond",
+      "weights": ["300", "400", "600"],
+      "usage": "Used for all major headings (H1, H2, H3) and the kinetic hero. Provides an elegant, humanistic, and editorial feel.",
+      "tracking": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Outfit",
+      "weights": ["300", "400", "500"],
+      "usage": "Used for all body text, dashboard data, and UI elements. Clean, modern, and highly legible.",
+      "tracking": "tracking-normal"
+    },
+    "scale_rules": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl",
+      "h2": "text-3xl md:text-4xl lg:text-5xl",
+      "h3": "text-2xl md:text-3xl",
+      "body": "text-base md:text-lg",
+      "labels": "text-xs md:text-sm uppercase tracking-[0.2em]"
+    }
+  },
+  "colors": {
+    "palette_name": "Warm Healing (Archetype: Organic & Earthy)",
+    "css_variables": {
+      "light": {
+        "--background": "42 20% 97%",
+        "--foreground": "144 13% 20%",
+        "--card": "0 0% 100%",
+        "--card-foreground": "144 13% 20%",
+        "--primary": "137 13% 42%",
+        "--primary-foreground": "0 0% 100%",
+        "--secondary": "120 12% 95%",
+        "--secondary-foreground": "144 13% 30%",
+        "--muted": "120 6% 90%",
+        "--muted-foreground": "144 8% 45%",
+        "--accent": "33 30% 90%",
+        "--accent-foreground": "144 13% 20%",
+        "--border": "120 6% 90%",
+        "--ring": "137 13% 42%",
+        "--radius": "1rem"
+      }
+    },
+    "rules": [
+      "Light theme is enforced as the primary experience to evoke daytime, clarity, and hope.",
+      "NEVER use generic purple-on-white AI-slop.",
+      "Use #FAF9F6 as the main background.",
+      "Color is functional: primary sage green used sparingly for active states, CTAs, and progress."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": {
+      "cards": "Flat solid background with a delicate 1px border (border-black/5) and a very soft ambient shadow (shadow-[0_8px_30px_rgb(0,0,0,0.04)]).",
+      "glassmorphism": "Used ONLY for sticky headers. bg-white/70 backdrop-blur-xl border-b border-black/5. NEVER use completely transparent headers.",
+      "neumorphism_tactile": "For daily journal mood buttons or small dashboard widgets, soft inner shadows to indicate pressed states."
+    },
+    "borders_and_radii": {
+      "radius": "Large, soft corners. rounded-2xl to rounded-3xl for major cards to evoke safety."
+    }
+  },
+  "layouts_and_grids": {
+    "marketing_page": {
+      "strategy": "The 'Tetris' Grid (Mode A) with aggressive asymmetry.",
+      "hero": "Large kinetic typography. Full height or 80vh. Subdued abstract sand/fog background image treated deliberately (clipped frame or soft overlay).",
+      "manifesto": "Numbered chapters using a bento grid but with wide gaps (gap-12 or gap-16). Very generous padding (py-24 or py-32).",
+      "marquee": "Slow editorial marquee, low contrast. react-fast-marquee with Serif font. Text: 'RESPIRĂ • VINDECĂ-TE • TRĂIEȘTE •'."
+    },
+    "dashboard_shell": {
+      "strategy": "High Density Grid (Mode B), but softened with generous padding inside cards.",
+      "sidebar": "Collapsible, soft sage background bg-[#EEF2EE].",
+      "main_content": "Dashboard grid grid-cols-1 md:grid-cols-3 gap-6. Top-left widget is the Sobriety Tracker (dominant visual).",
+      "widgets": {
+        "sobriety_tracker": "col-span-1 md:col-span-2 row-span-1. Large elegant number for days sober.",
+        "daily_journal": "col-span-1. Mood logging dots.",
+        "ai_chat": "Clean chat interface, soft bubbles, no harsh borders.",
+        "community": "List view, col-span-1 md:col-span-3."
+      }
+    }
+  },
+  "motion": {
+    "libraries": [
+      "framer-motion",
+      "lenis"
+    ],
+    "hero_reveal": "Masked line-by-line reveal on-load. Wrapper overflow-hidden, child initial={{ y: '100%' }} animate={{ y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}.",
+    "scroll_animations": "Framer motion whileInView with staggered children viewport={{ once: true, margin: '-100px' }}. Gentle fade up (y: 30, opacity: 0).",
+    "micro_interactions": "Hover states on cards: hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out.",
+    "lenis": "Mandatory for smooth momentum scrolling on the marketing page to give a premium feel."
+  },
+  "3d_libraries": {
+    "recommendation": "framer-motion-3d or react-spring/parallax",
+    "usage": "Use a subtle 3D float or parallax effect on the hero image (abstract sand or fog) to create a 'signature on-load moment' without overwhelming the user. Avoid complex WebGL scenes as they might distract from the calming purpose."
+  },
+  "components_and_rules": {
+    "shadcn_customization": [
+      "Override default Shadcn styles to remove the 'Vercel-look'. Increase border-radius to rounded-2xl.",
+      "Remove hard black borders on inputs, use soft gray borders that turn sage green on focus (focus:ring-primary).",
+      "Use Shadcn Card, Button, Input, Dialog for the dashboard, heavily customized for the earthy palette."
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "style": "Lightweight, consistent stroke width (1.5px). NEVER use emojis as icons."
+    }
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1504548840739-580b10ae7715?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNtb290aCUyMHdhdmVzJTIwc2FuZHxlbnwwfHx8fDE3ODUzNzExNzd8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract smooth sand dune. Use with a very soft overlay (bg-white/40) to ensure text readability.",
+      "category": "background"
+    },
+    "manifesto_images": {
+      "url": "https://images.unsplash.com/photo-1560996025-95b43d543770?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxjYWxtJTIwcGVhY2VmdWwlMjBuYXR1cmUlMjBmb2d8ZW58MHx8fHwxNzg1MzcxMTc2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Foggy lake. Use in a clipped frame (e.g., a tall arched image or strict rectangle with border-radius) next to text.",
+      "category": "content"
+    },
+    "dashboard_welcome": {
+      "url": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxzdW5yaXNlJTIwaG9wZSUyMHBlYWNlZnVsfGVufDB8fHx8MTc4NTM3MTE3Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Sea under clouds at golden hour. Good for a small welcome banner in the dashboard.",
+      "category": "banner"
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure text over the hero image has sufficient contrast. If necessary, use a subtle text-shadow or a gradient overlay.",
+    "focus": "All interactive elements must have a clear focus state (focus:ring-2 focus:ring-primary focus:ring-offset-2).",
+    "testing": "All interactive elements MUST include a data-testid attribute (e.g., data-testid=\"login-submit-button\").",
+    "motion": "Respect prefers-reduced-motion for all Framer Motion animations."
+  },
+  "instructions_to_main_agent": {
+    "step_1": "Initialize Tailwind CSS with the provided CSS variables in the globals.css and configure tailwind.config.js to use Cormorant Garamond (serif) and Outfit (sans).",
+    "step_2": "Install required dependencies: framer-motion, @studio-freight/lenis, lucide-react, react-fast-marquee, sonner.",
+    "step_3": "Build the Marketing Landing Page in Romanian using .js and .jsx files. Implement the kinetic hero with a line-by-line reveal using Framer Motion. Add the editorial marquee and the numbered manifesto chapters in a bento-style asymmetrical grid.",
+    "step_4": "Build the Dashboard Shell. Create a collapsible sidebar navigation. Ensure the layout is a dense but calm grid. Implement the Sobriety Tracker, Daily Journal, AI Chat, and Community widgets.",
+    "step_5": "Apply 'Godly' level polish: ensure no fully transparent headers (use glassmorphism), verify generous padding throughout (p-8, py-24), and add hover/active micro-interactions to all buttons and cards."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "ui_ux_principles": [
+      "Create depth through layered design elements with z-index hierarchy and soft shadows.",
+      "Use glassmorphism effects with backdrop filters (12-24px blur) for sticky/floating elements.",
+      "NEVER use generic centered layouts or simplistic gradients.",
+      "NEVER apply universal transitions (transition: all). Target specific properties.",
+      "DO NOT center align the app container text globally.",
+      "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+      "All interactive and key informational elements MUST include a data-testid attribute.",
+      "No complete transparent background in header. Always use a solid color or glassmorphism.",
+      "For Romanian language, ensure diacritics (ă, â, î, ș, ț) render correctly with the chosen fonts."
+    ]
+  }
+}
