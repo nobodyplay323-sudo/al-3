@@ -67,7 +67,7 @@
 .text-balance { text-wrap: balance; }
 
 /* Kinetic hero mask reveal */
-.reveal-mask { overflow: hidden; display: block; }
+.reveal-mask { overflow: hidden; display: block; padding: 0.14em 0.06em 0.22em; margin: -0.14em -0.06em -0.18em; }
 
 /* Grain overlay */
 .grain::before {

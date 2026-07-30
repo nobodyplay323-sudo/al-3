@@ -43,7 +43,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
-        <Toaster position="top-center" richColors />
+        <Toaster position="bottom-center" richColors />
       </AuthProvider>
     </div>
   );

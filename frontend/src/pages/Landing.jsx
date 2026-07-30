@@ -101,7 +101,7 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-[100svh] flex items-end overflow-hidden pb-16 pt-28">
+    <section ref={ref} className="relative min-h-[100svh] flex items-center overflow-hidden pb-16 pt-24">
       <motion.div style={{ y, scale }} className="absolute inset-0 z-0">
         <img src={HERO_IMG} alt="dune de nisip" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-background/55" />
@@ -115,7 +115,7 @@ const Hero = () => {
           </span>
         </FadeIn>
 
-        <h1 className="font-serif font-light tracking-tight text-foreground text-5xl md:text-7xl lg:text-[7.5rem] leading-[0.95]">
+        <h1 className="font-serif font-light tracking-tight text-foreground text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
           <MaskLine delay={0.35}>Drumul tău spre</MaskLine>
           <MaskLine delay={0.5} className="italic text-primary">libertate</MaskLine>
           <MaskLine delay={0.65}>începe azi.</MaskLine>
